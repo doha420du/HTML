@@ -10,7 +10,19 @@
     background: #00ffff;
 }
 
-
 div[role]{
     color: yellow;
+}
+
+div[role="main"]{
+    background-color: black;
+}
+
+/*
+select all the li elements who are the second child of their parents
+*/
+
+li:nth-child(2)
+{
+    background-color: red;
 }
