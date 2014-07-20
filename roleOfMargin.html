@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Understanding the role of margin in html normal flow</title>
+        <style type="text/css">
+            body
+            {
+                margin:0;
+            }
+            h1
+            {
+                background-color: green;
+                position: absolute;
+            }
+            div
+            {
+                background-color: red;
+                position: relative;
+            }
+            /*
+            strong
+            {
+                background-color: green;
+                position: relative;
+                top: 10px;
+                left: 20px;
+            }
+            */
+            strong
+            {
+                background-color: green;
+                position: absolute;
+                top: 10px;
+                left: 20px;
+            }
+            
+            span
+            {
+                background-color: green;
+                margin-left: 0px;
+            }
+            div span
+            {
+                color: blue;
+            }
+            html>body table tr[id="totals"] td ul>li{color maroon;}
+        </style>
+    </head>
+    <body>
+        <h1>Hi, <i>FTFL</i></h1>
+        <div>
+            <strong style="color: yellow">BATCH</strong>
+            <span>FTFL-01</span>
+        </div>
+    </body>
+</html>
