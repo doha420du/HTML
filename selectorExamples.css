@@ -1,3 +1,16 @@
+/* 
+
+    http://www.w3.org/TR/selectors/#selectors
+
+    Universal Selector
+    -avoid using this selector
+
+*/
 *{
     background: #00ffff;
+}
+
+
+div[role]{
+    color: yellow;
 }
