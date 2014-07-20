@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Understanding Selector Specificity</title>
+        <style type="text/css">
+            strong
+            {
+                color: green;
+            }
+            span
+            {
+                color: green;
+            }
+            div span
+            {
+                color: blue;
+            }
+            html>body table tr[id="totals"] td ul>li{color maroon;}
+        </style>
+    </head>
+    <body>
+        <h1>Hi, <i>FTFL</i></h1>
+        <div>
+            <strong style="color: yellow">BATCH</strong>
+            <span>FTFL-01</span>
+        </div>
+    </body>
+</html>
