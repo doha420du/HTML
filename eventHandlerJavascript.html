@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Understanding Event & Event Handler Registration</title>
+    <style>
+        img
+        {
+            display: none;
+        }
+        img[alt='Sports']
+        {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div role="article">
+        <h3 onclick="alert('I am clicked')">So What is This About?</h3>
+        <p>There is a continuing need to show the power of <abbr title="Cascading Style Sheets">CSS</abbr>. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The <abbr title="HyperText Markup Language">HTML</abbr> remains the same, the only thing that has changed is the external <abbr title="Cascading Style Sheets">CSS</abbr> file. Yes, really.</p>
+        <p><abbr title="Cascading Style Sheets">CSS</abbr> allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating what it can truly be, once the reins are placed in the hands of those able to create beauty from structure. Designers and coders alike have contributed to the beauty of the web; we can always push it further.</p>
+    </div>
+<div>
+    <img src="image/sports-q-c-400-300.jpg" alt="Sports">
+    <img src="image/city-q-c-400-300.jpg" alt="City">
+    <img src="image/nature-q-c-400-300.jpg" alt="Nature">
+    <img src="image/technics-q-c-400-300.jpg" alt="Technique">
+    <img src="image/transport-q-c-400-300.jpg" alt="Transport">
+    <img src="image/nightlife-q-c-400-300.jpg" alt="Nightlife">
+</div>
+        <nav role="gallaery navigation">
+            <ul>
+                <li> <a href="#" onclick="alert('I am clicked')">Sports</a> </li>
+                <li> <a href="#" onclick="alert('I am clicked')">City</a> </li>
+                <li> <a href="#" onclick="alert('I am clicked')">Nature</a> </li>
+                <li> <a href="#" onclick="alert('I am clicked')">Technique</a> </li>
+                <li> <a href="#" onclick="alert('I am clicked')">Transport</a> </li>
+                <li> <a href="#" onclick="alert('I am clicked')">Nightlife</a> </li>
+            </ul>
+        </nav>
+    <form>
+        <input id="fullname" name="fullname"/>
+        <button name="clickMe" id="click_me">Click me</button>
+    </form>
+
+    <script>
+
+        function validateName(evt)
+        {
+            console.log(typeof  evt);
+            console.log(evt.target);
+            
+            var fullname = document.getElementById('fullname').value;
+            if (fullname =="")
+            {
+                alert("Please enter your name");
+                evt.preventDefault();
+                return false;
+            }
+            else
+            {
+                alert("Thank you "+fullname+", for entering your name.");
+                return true;
+            }
+        }
+        ;(function()
+        {
+            var btntoClick = document.getElementById('click_me');
+            btntoClick.addEventListener('click',validateName,false);
+        })();
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
